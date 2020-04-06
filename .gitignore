@@ -1,0 +1,18 @@
+# intellij idea
+.idea
+*iml
+out
+
+# eclipse
+classes
+*.class
+.classpath
+.project
+.settings
+build.fxbuild
+
+# script
+rmiregistry.sh
+
+# macos
+.DS_Store

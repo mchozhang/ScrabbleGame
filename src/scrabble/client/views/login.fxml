@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="loginPane" prefHeight="320.0" prefWidth="500.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrabble.client.LoginController">
+    <!--<TextArea layoutX="45.0" layoutY="53.0" prefHeight="137.0" prefWidth="390.0" text="Rules are as follow:"-->
+              <!--AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0"-->
+              <!--AnchorPane.topAnchor="53.0" editable="false"/>-->
+    <HBox AnchorPane.leftAnchor="30" AnchorPane.bottomAnchor="180" spacing="10.0">
+        <Label prefHeight="27.0" prefWidth="130.0" text="Host:" textAlignment="RIGHT" style="-fx-font-size: 20"/>
+        <JFXTextField fx:id="hostTextField" prefWidth="235" style="-fx-font-size: 15"/>
+    </HBox>
+    <JFXButton fx:id="connectBtn" text="Connect" prefWidth="130" style="-fx-background-color: lightcoral; -fx-font-size: 20"
+               textFill="ivory" buttonType="RAISED" AnchorPane.leftAnchor="285" AnchorPane.bottomAnchor="125"/>
+    <HBox AnchorPane.leftAnchor="30" AnchorPane.bottomAnchor="90" spacing="10.0">
+        <Label prefHeight="27.0" prefWidth="140.0" text="Player Name:" textAlignment="RIGHT" style="-fx-font-size: 20"/>
+        <JFXTextField fx:id="nameTextField" prefWidth="235" style="-fx-font-size: 15"/>
+    </HBox>
+    <Label fx:id="messageLabel" AnchorPane.leftAnchor="135" AnchorPane.bottomAnchor="70" text="test" textFill="#f80000" visible="false"/>
+    <JFXButton fx:id="resetBtn" AnchorPane.leftAnchor="185" AnchorPane.bottomAnchor="20" mnemonicParsing="false" text="Reset"
+               prefWidth="90" style="-fx-background-color: lightcoral; -fx-font-size: 20" textFill="ivory" buttonType="RAISED"/>
+    <JFXButton fx:id="loginBtn" AnchorPane.leftAnchor="330" AnchorPane.bottomAnchor="20" mnemonicParsing="false" text="Login"
+               prefWidth="90" style="-fx-background-color: lightcoral; -fx-font-size: 20" textFill="ivory" buttonType="RAISED"/>
+    <Label id="greetingLabel" layoutX="10.0" layoutY="20.0" text="Welcome to Scrabble Game" textAlignment="JUSTIFY"/>
+</AnchorPane>

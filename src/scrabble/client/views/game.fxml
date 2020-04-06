@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<AnchorPane fx:id="gamePane" prefHeight="630" prefWidth="800" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrabble.client.GameController">
+    <Label id="greetingLabel" text="Scrabble Game" textAlignment="JUSTIFY" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="20.0" />
+
+    <AnchorPane prefHeight="700" prefWidth="200" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.topAnchor="50">
+        <Label id="listLabel" style="-fx-font-size: 15" text="Player List" AnchorPane.topAnchor="0" />
+
+        <TableView fx:id="playerTable" prefHeight="130" prefWidth="200" AnchorPane.topAnchor="20">
+            <columns>
+                <TableColumn fx:id="turnCol" prefWidth="40"/>
+                <TableColumn fx:id="nameCol" prefWidth="80" text="Name"/>
+                <TableColumn fx:id="scoreCol" prefWidth="78" text="Score"/>
+            </columns>
+        </TableView>
+        <Label id="consoleLabel" style="-fx-font-size: 15" text="Game Console" AnchorPane.topAnchor="160.0" />
+        <TextArea fx:id="consoleText" editable="false" prefHeight="100" prefWidth="200" wrapText="true" AnchorPane.topAnchor="180">
+         <font>
+            <Font size="10.0" />
+         </font></TextArea>
+
+        <Label id="letterLabel" style="-fx-font-size: 15" text="Letters In Hand" AnchorPane.topAnchor="285" />
+        <GridPane fx:id="letterPane" hgap="5" prefHeight="100" prefWidth="200" vgap="5" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="310">
+        </GridPane>
+
+        <Text fx:id="buttonText" AnchorPane.topAnchor="400">
+        </Text>
+        <VBox fx:id="placeLetterBox" prefWidth="200" visible="false" AnchorPane.topAnchor="420">
+            <JFXButton fx:id="confirmBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Confirm" textAlignment="CENTER">
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="letterPassBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Pass" textAlignment="CENTER" />
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+        </VBox>
+
+        <VBox fx:id="pickWordBox" prefWidth="200" visible="false" AnchorPane.topAnchor="420">
+            <JFXButton fx:id="horizontalWordBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Horizontal Word" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="verticalWordBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Vertical Word" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="crossWordBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Cross Word" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="wordPassBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Pass" textAlignment="CENTER" />
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+        </VBox>
+
+        <VBox fx:id="pollBox" prefWidth="200" visible="false" AnchorPane.topAnchor="420">
+
+            <HBox fx:id="voteBox" spacing="5">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </HBox>
+            <JFXButton fx:id="approveBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Agree" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="opposeBtn" prefHeight="30" prefWidth="180" styleClass="boxBtn" text="Disagree" textAlignment="CENTER">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </JFXButton>
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+        </VBox>
+    </AnchorPane>
+
+    <GridPane fx:id="boardPane" AnchorPane.bottomAnchor="30" AnchorPane.leftAnchor="260" AnchorPane.rightAnchor="30" AnchorPane.topAnchor="70">
+    </GridPane>
+</AnchorPane>
