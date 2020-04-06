@@ -28,7 +28,8 @@ java -jar client.jar <host>
 ```
 
 ## Architecture
-![architecture](images/architecture.png)
+![architecture](images/architecture.png)  
+
 The project is divided as `Server` and `Client`, main class in server side is `src/server/ScrabbleServer`,
 which maintains the game pool the player list. Main class of client is `src/MainApp`, which is a `JavaFX` app
 with RMI implementation, you should start multiple client processes to test the program. 
